@@ -1,0 +1,258 @@
+@keyframes icon {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.hea, .texto {
+    width: 33%;
+    display: flex;              /* Activa flexbox */
+    justify-content: center;    /* Centra el contenido horizontalmente */
+    align-items: center;        /* Centra el contenido verticalmente */
+}
+
+.hea #logo {
+    width: 40%;                 /* Ajusta el ancho del logo */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: .2s linear;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 2rem 7%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .navbar a{
+    font-size: 3rem;
+    padding: 0 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+header .navbar a:hover {
+    color: rgb(241, 171, 122);
+}
+
+header .bi-list{
+font-size: 3rem;
+color:black;
+border-radius: 5 rem;
+padding: 5 rem 1.5 rem;
+cursor: pointer;
+border: 1 rem solid rgba(0,0,0,.3);
+display: none;
+}
+
+header #toggler{
+    display: none;
+}
+
+/*Home*/
+
+section{
+    padding: 4rem 7%;
+    margin-top: 8rem;
+}
+
+.subtitle{
+    font-size: 3rem;
+    color: rgb(6, 6, 6);
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(255, 119, 0, 0.5);
+    line-height: 2.5rem;
+    word-wrap: normal;
+    font-style: italic
+}
+
+.title{
+    font-size: 4rem;
+    padding: 2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(214, 111, 1);
+    text-align: center;
+    letter-spacing: .2rem;
+    font-style: italic
+}
+
+.home{
+    height: 100v;
+    background: linear-gradient(rgba(24, 23, 23, 0.082), rgba(234, 231, 231, 0.678)), url(../imagenes/fondo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content{
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+}
+
+.inner-content{
+    max-width: 70rem;
+    margin-top: 20rem;
+    text-align: center;
+}
+
+.inner-content-img{
+    margin-top: 2rem;
+}
+
+.inner-content-img img{
+    width: 45rem;
+    height: auto;
+    animation: icon 5s ease infinite;
+}
+
+/*--------------MENU----------*/
+
+.img-container {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.card-img-top-1 {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.card {
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-body{
+    padding: 25px;
+    margin-top: -15px;
+
+}
+
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+/*media queries*/
+@media (max-width:991px){
+
+    html {
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:810px){
+
+    html {
+        font-size: 50%;
+    }
+
+    header .bi-list{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0;right: 0;
+        background-color: white;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header #toggler:checked ~ .texto .navbar{
+        max-height: 20rem; 
+    }
+
+    header .navbar a{
+        margin: 1rem;
+        padding: 1rem;
+        background: white;
+        display: flex; /* Asegura que flexbox funcione */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        text-align: center;
+    }
+
+    .home {
+        display: flex; /* Flexbox para alinear elementos */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente si hay suficiente espacio */
+        flex-direction: column; /* Apila elementos verticalmente */
+        height: 100vh; /* Hace que la sección ocupe toda la altura de la ventana */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+    
+    /* Contenedor de imagen y texto */
+    .home-content {
+        display: flex;
+        flex-direction: column; /* Apila la imagen y el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        text-align: center; /* Centra el texto */
+    }
+    
+    /* Imagen dentro de su contenedor */
+    .inner-content-img img {
+        width: 45rem; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    
+    /* Texto debajo de la imagen */
+    .inner-content {
+        max-width: 70rem;
+        margin-top: 2rem; /* Añade un espacio entre la imagen y el texto */
+    }   
+
+}
+
+@media (max-width:450px){
+    html {
+        font-size: 40%;
+    }
+    .inner-content-img img {
+        width: 35rem;
+    }
+}
