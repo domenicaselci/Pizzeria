@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @keyframes icon {
     0% {
         transform: scale(0.9);
@@ -8,6 +9,30 @@
     100% {
         transform: scale(0.9);
     }
+}
+
+/*icono wpp*/
+
+.float{
+        position:fixed;
+        width:50px;
+        height: 50px;
+        background-color: #25d366;
+        bottom: 40px;
+        right: 40px;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 999;
+}
+
+.bi{
+    font-size: 33px;
+}
+
+.float:hover{
+    background-color: #1f9148;
 }
 
 .hea, .texto {
@@ -152,21 +177,71 @@ section{
 }
 
 .card-img-top-1 {
-    padding: 15px;
+    padding: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
     border-radius: 30px;
 }
-.card {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+
 
 .card-body{
     padding: 25px;
     margin-top: -15px;
 }
+/*ESLOGAN*/
+
+.slogan{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+
+/*TRANSICIONES*/
+.cardi {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardi:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 64px 75px, 
+                rgba(0, 0, 0, 0.12) 0px -22px 40px, 
+                rgba(0, 0, 0, 0.12) 0px 10px 14px, 
+                rgba(0, 0, 0, 0.17) 0px 18px 23px, 
+                rgba(0, 0, 0, 0.09) 0px -5px 7px;
+}
+
+.descrip {
+    text-align: center;
+    color: #333;
+    line-height: 1.6;
+}
+
+.descrip p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.descrip p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(247, 119, 27);; /* Puedes ajustar este color */
+}
+
+/**/
 
 h2{
     text-align: center;
@@ -174,19 +249,8 @@ h2{
 p{
     text-align: center;
 }
-/*servicios*/
-
-.descrip{
-     justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.descrip p{
-    list-style-type: none;
-    margin: 0;
-    font-size: 1.5rem;
-}
+/*servicios
+*/
 
 .stit{
     padding: 1%;
@@ -216,7 +280,7 @@ p{
 
 .fo{
     font-size: 2.5rem;
-    text-align: right;
+    text-align: center;
     color: white; 
 }
 
@@ -295,6 +359,16 @@ p{
         max-width: 70rem;
         margin-top: 2rem; /* Añade un espacio entre la imagen y el texto */
     }   
+    .float{
+        width:35px;
+        height: 35px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .bi{
+        font-size: 23px;
+    }
 
 }
 
