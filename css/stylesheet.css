@@ -228,11 +228,12 @@ section{
     text-align: center;
     color: #333;
     line-height: 1.6;
+    padding: 10px;
 }
 
 .descrip p {
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 1.9rem;
 }
 
 .descrip p:first-child {
@@ -297,8 +298,12 @@ p{
 
 @media (max-width:810px){
 
-    html {
-        font-size: 50%;
+    .card-body p {
+        font-size: 1.5rem;
+    }
+
+    .descrip p{
+        font-size: 1.6rem;
     }
 
     header .bi-list{
@@ -373,9 +378,7 @@ p{
 }
 
 @media (max-width:450px){
-    html {
-        font-size: 50%;
-    }
+
     .inner-content-img img {
         width: 35rem;
     }
