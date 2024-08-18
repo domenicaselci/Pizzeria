@@ -239,7 +239,7 @@ section{
 .descrip p:first-child {
     font-weight: bold;
     font-size: 20px;
-    color: rgb(247, 119, 27);; /* Puedes ajustar este color */
+    color: rgb(247, 119, 27); /* Puedes ajustar este color */
 }
 
 /**/
@@ -268,7 +268,18 @@ p{
 }
 
 .newcard{
-    box-shadow: rgba(171, 89, 8, 0.792) 0px 1px 2px, rgba(171, 89, 8, 0.792) 0px 2px 4px, rgba(171, 90, 8, 0.527) 0px 4px 8px, rgba(171, 90, 8, 0.422) 0px 8px 16px, rgba(171, 90, 8, 0.368) 0px 16px 32px, rgba(171, 90, 8, 0.372) 0px 32px 64px;
+    box-shadow: rgba(191, 99, 6, 0.792) 0px 1px 2px, rgba(191, 99, 6, 0.792) 0px 2px 4px, rgba(191, 99, 6, 0.792) 0px 4px 8px, rgba(191, 99, 6, 0.792) 0px 8px 16px, rgba(171, 90, 8, 0.368) 0px 16px 32px, rgba(171, 90, 8, 0.372) 0px 32px 64px;
+    border-radius: 40px;
+}
+
+.newcard a{
+    text-decoration: none;
+    color: black;
+}
+
+.newcard a:hover{
+    color: rgb(103, 102, 102);
+    transition: max-height 0.2s ease;
 }
 
 /*footer*/

@@ -1,0 +1,115 @@
+@keyframes icon {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100v;
+    background: linear-gradient(rgba(24, 23, 23, 0.082), rgba(234, 231, 231, 0.678)), url(../imagenes/fondo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-container{
+    padding: 4.5%;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px
+}
+
+.contact-left-title h2{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: rgb(3, 3, 3);
+    text-shadow: 2px 2px 4px rgba(255, 119, 0, 0.5);
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color:#f5a534 ;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-right img{
+    width: 35rem;
+    height: auto;
+    animation: icon 5s ease infinite;
+}
+
+.contact-inputs{
+    width: 400px;
+    height:50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid #f99406;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fdfdfd;
+    gap:10px;
+    border: none;
+    border-radius: 50px;
+    background:linear-gradient(270deg,#f99406, #fa6d86);
+    cursor: pointer;
+}
+
+@media (max-width:810px){
+
+    .contact-container{
+        margin-top: 15%;
+    }
+    .contact-inputs{
+        width: 80vw;
+    }
+
+    .contact-right{
+        display: none;
+    }
+
+    .nav-links{
+        display: flex;
+        justify-content: center;
+    }
+}
